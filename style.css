@@ -25,6 +25,7 @@ body {
   border-radius: 50px;
   background-color: white;
   color: green;
+  font-weight: bolder;
 }
 
 #navbar {
@@ -98,12 +99,13 @@ body {
     border-radius: 15px;
     background-color: white;
     padding: 20px;
+    margin-bottom: 10%;
   }
   .block-title {
     font-family: "open Sans", sans-serif;
     font-weight: bolder;
   }
-  .block-body {
+  .block-item-body, .block-body {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -111,15 +113,82 @@ body {
     font-family: "open Sans", sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: #aaaaaa;
   }
   .block-about-item {
-    padding: 20px 10px 20px 10px;
+    padding: 20px 20px 10px;
     width: 95%;
     border: 1px solid #aaaaaa;
     border-radius: 15px;
     margin: auto;
+  }
+  .block-disable {
+    opacity: 0.5;
+  }
+  .block-form {
+    border: 1px solid #aaaaaa;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .form-header {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    column-gap: 5px;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  .form-header label {
+    font-weight: bolder;
+  }
+  .form-body {
+    font-family: "open Sans", sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+  .form-footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    row-gap: 15px;
+    padding-bottom: 20px;
+  }
+  .form-footer p {
+    font-size: 14px;
+  }
+  .form-footer-pledge-input {
+    border-radius: 50px;
+    width: 50%;
+  }
+  .form-footer-input {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    position: relative;
+  }
+  .form-footer-input .btn {
+    width: 50%;
+  }
+  .form-footer-input label {
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    top: 0.4rem;
+    color: #aaaaaa;
+    font-weight: bolder;
+  }
+
+  .green-words {
+    color: #3cb3ab;
+    font-weight: bolder;
+  }
+
+  .gray-words {
+    color: #aaaaaa;
+    font-weight: bolder;
   }
 
   #introduction {
@@ -148,8 +217,7 @@ body {
     font-family: "open Sans", sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: #aaaaaa;
     align-items: center;
   }
   #introduction-btns {
@@ -180,9 +248,43 @@ body {
     font-weight: bolder;
   }
 
-  #about-title, #about-content {
+  #about-title {
+    padding-left: 10px;
+  }
+  #about-content {
     margin: auto;
     width: 95%;
+    font-family: "open Sans", sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+
+  .number-bolder-lg {
+    font-weight: bolder;
+    font-size: 40px;
+  }
+
+  .btn-disable {
+    border: none;
+    border-radius: 50px;
+    background-color: #3cb3ab;
+    color: white;
+    font-weight: bolder;
+    background-color: #aaaaaa;
+  }
+
+  #model-reward-title {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  #model-reward-content {
+    font-weight: lighter;
+    font-size: 14px;
+  }
+
+  #no-reward .form-header {
+    justify-content: flex-start;
   }
 }
 

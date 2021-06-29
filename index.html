@@ -41,7 +41,7 @@
             </ul>
         </div>
         <div id="responsive-button" onclick="dropMenu(document.getElementById('navbar-navdiv'));">
-            <i class="fas fa-ellipsis-v fa-3x"></i>
+            <i class="fas fa-bars fa-3x"></i>
         </div>
     </nav>
     <div class="container-fluid" id="page-cover">
@@ -91,8 +91,8 @@
             </div>
             <div class="block-about-item" id="bamboo">
                 <div class="block-item-header" id="bamboo-title-block">
-                    <h3 class="block-title">Bammboo Stand</h3>
-                    <p>Pledge $35 or more</p>
+                    <h3 class="block-title">Bamboo Stand</h3>
+                    <p class="green-words">Pledge $35 or more</p>
                 </div>
                 <div class="block-item-body">
                     <p>
@@ -100,29 +100,29 @@
                     </p>
                 </div>
                 <div class="block-item-footer" id="bamboo-btn">
-                    <p><span>101</span> left</p>
+                    <p><span class="number-bolder-lg">101</span> left</p>
                     <button class="btn">Select Reward</button>
                 </div>
             </div>
             <div class="block-about-item" id="black">
-                <div class="block-item-header id=" black-title-block ">
+                <div class="block-item-header" id="black-title-block">
                     <h3 class="block-title ">Black Edition Stand</h3>
-                    <p>Pledge $75 or more</p>
+                    <p class="green-words">Pledge $75 or more</p>
                 </div>
-                <div class="block-item-body ">
+                <div class="block-item-body">
                     <p>
                         You get a Black Special Edition compuyter stand and a personla thank you . You'll be added to our Backer member list. Shipping is included.
                     </p>
                 </div>
 
                 <di class="block-item-footer " v>
-                    <p><span>64</span> left</p>
+                    <p><span class="number-bolder-lg">64</span> left</p>
                     <button class="btn ">Select Reward</button>
             </div>
-            <div class="block-about-item" id="special ">
-                <div class="block-item-header " id="special ">
+            <div class="block-about-item block-disable" id="special" aria-disabled="true">
+                <div class="block-item-header " id="special">
                     <h3 class="block-title ">Mahogany Special Edition</h3>
-                    <p>Pledge $200 or more</p>
+                    <p class="green-words">Pledge $200 or more</p>
                 </div>
                 <div class="block-item-body ">
                   <p>
@@ -130,17 +130,22 @@
                   </p>
                 </div>
                 <div class="block-item-footer ">
-                    <p><span>0</span> left</p>
-                    <button class="btn" disabled>Out of stock</button>
+                    <p><span class="number-bolder-lg">0</span> left</p>
+                    <button class="btn btn-disable" disabled>Out of stock</button>
                 </div>
             </div>
         </div>
         
         <div class="block" id="models-reward">
+            <div class="block-title">
+                <h1 id="model-reward-title">Back to this project</h1>
+                <p class="gray-words" id="model-reward-content">Want to support us in bringing MasterCraft Bamboo Monitor Raiser out in the world?</p>
+            </div>
+
             <div class="block-form" id="no-reward">
                 <form action="">
                     <div class="form-header">
-                        <input type="radio"><label for="">Pledge with no reward</label>
+                        <label for=""><input type="radio">Pledge with no reward</label>
                     </div>
                     <div class="form-body">
                         <p>
@@ -152,7 +157,7 @@
             <div class="block-form" id="bamboo-reward">
                 <form action="">
                     <div class="form-header">
-                        <input type="radio"><label for="">Bamboo Stand <span class="green-words">Pledge $25 or more</span></label>
+                        <label for=""><input type="radio">Bamboo Stand <span class="green-words">Pledge $25 or more</span></label>
                         <p><span class="number-left">101</span> <span class="gray-words">left</span></p>
                     </div>
                     <div class="form-body">
@@ -163,16 +168,18 @@
                     <hr>
                     <div class="form-footer">
                         <p class="gray-words">Enter your pledge</p>
-                        <label for="">$</label>
-                        <input type="text">
-                        <input type="submit" class="btn" value="continue">
+                        <div class="form-footer-input">
+                            <label for="">$</label>
+                            <input class="form-footer-pledge-input" type="text">
+                            <input type="submit" class="btn" value="continue">
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="block-form" id="">
                 <form action="">
                     <div class="form-header">
-                        <input type="radio"><label for="">Black Edition Stand <span class="green-words">Pledge $75 or more</span></label>
+                        <label for=""><input type="radio">Black Edition Stand <span class="green-words">Pledge $75 or more</span></label>
                         <p><span class="number-left">64</span> <span class="gray-words">left</span></p>
                     </div>
                     <div class="form-body">
@@ -181,25 +188,24 @@
                     <hr>
                     <div class="form-footer">
                         <p class="gray-words">Enter your pledge</p>
-                        <label for="">$</label>
-                        <input type="text">
-                        <input type="submit" class="btn" value="continue">
+                        <div class="form-footer-input">
+                            <label for="">$</label>
+                            <input class="form-footer-pledge-input" type="text">
+                            <input type="submit" class="btn" value="continue">
+                        </div>
                     </div>
                 </form>
             </div>
-            <div class="block-form" id="">
+            <div class="block-form block-disable" id="">
                 <form action="">
                     <div class="form-header">
-                        <input type="radio"><label for="">Mahogany Special Edition <span class="green-words">Pledge $75 or more</span></label>
+                        <label for=""><input type="radio" disabled>Mahogany Special Edition <span class="green-words">Pledge $75 or more</span></label>
                         <p><span class="number-left">0</span> <span class="gray-words">left</span></p>
                     </div>
                     <div class="form-body">
                         <p>
                             You get two Special Edition Mahogany stands, a Bakcer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included. 
                         </p>
-                    </div>
-                    <hr>
-                    <div class="form-footer">
                     </div>
                 </form>
             </div>

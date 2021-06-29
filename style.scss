@@ -18,8 +18,9 @@ $body-color: #e7e1e1;
   font-family: "open Sans", sans-serif;
   font-weight: lighter;
   font-size: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  color: $gray;
 }
 
 @mixin button() {
@@ -34,8 +35,13 @@ $body-color: #e7e1e1;
   border-radius: 50px;
   background-color: white;
   color: green;
+  font-weight: bolder;
 }
 
+@mixin button-disable() {
+  @include button();
+  background-color: $gray;
+}
 html,
 body {
   margin: unset;
@@ -113,27 +119,90 @@ body {
     @include flexDisplay(column);
     border-radius: 15px;
     background-color: white;
-    padding:20px;
-    
+    padding: 20px;
+    margin-bottom:10%;
     &-title {
-      font-family:"open Sans", sans-serif;
+      font-family: "open Sans", sans-serif;
       font-weight: bolder;
     }
+
+    &-item-body,
     &-body {
       @include flexDisplay(column);
       align-items: center;
       @include content();
     }
-    &-about-item{
-      padding:20px 10px 20px 10px;
-      width:95%;
-      border:1px solid $gray;
+    &-about-item {
+      padding: 20px 20px 10px;
+      width: 95%;
+      border: 1px solid $gray;
       border-radius: 15px;
-      margin:auto;
+      margin: auto;
     }
-   
+    &-disable {
+      opacity: 0.5;
+    }
+    &-form {
+      border: 1px solid $gray;
+      border-radius: 15px;
+      padding: 10px;
+    }
   }
-  
+
+  .form {
+    &-header {
+      @include flexDisplay(row);
+      column-gap: 5px;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      label {
+        font-weight: bolder;
+      }
+    }
+
+    &-body {
+      @include content();
+    }
+    &-footer {
+      @include flexDisplay(column);
+      align-items: center;
+      row-gap:15px;
+      padding-bottom:20px;
+      p {
+        font-size: 14px;
+      }
+
+      &-pledge-input {
+        border-radius: 50px;
+        width: 50%;
+      }
+    }
+
+    &-footer-input {
+      @include flexDisplay(row);
+      position: relative;
+      .btn {
+        width: 50%;
+      }
+      label {
+        position: absolute;
+        z-index: 2;
+        left: 15px;
+        top: 0.4rem;
+        color: $gray;
+        font-weight: bolder;
+      }
+    }
+  }
+  .green-words {
+    color: $green;
+    font-weight: bolder;
+  }
+  .gray-words {
+    color: $gray;
+    font-weight: bolder;
+  }
+
   #introduction {
     //relative to page cover
     position: absolute;
@@ -144,7 +213,7 @@ body {
     &-logo {
       position: inherit;
       top: -30px;
-      left:40%;
+      left: 40%;
     }
     &-title {
       text-align: center;
@@ -156,43 +225,67 @@ body {
     &-content {
       @include flexDisplay(column);
       @include content();
-      align-items:center;
+      align-items: center;
     }
-    &-btns{
+    &-btns {
       @include flexDisplay(row);
       justify-content: center;
-      align-items:center;
+      align-items: center;
     }
   }
 
-  
   #report {
     margin-top: 65%;
     @include flexDisplay(column);
     justify-content: center;
-    align-items:center;
-    .report-element-item{
+    align-items: center;
+    .report-element-item {
       @include flexDisplay(column);
       align-items: center;
-      row-gap:5px;
-      border-bottom:1px solid $gray;
+      row-gap: 5px;
+      border-bottom: 1px solid $gray;
     }
-    .number{
+    .number {
       font-weight: bolder;
     }
   }
 
-  #about{
-    &-title,
-    &-content{
-      margin:auto;
+  #about {
+    &-title {
+      padding-left: 10px;
+    }
+    &-content {
+      margin: auto;
       width: 95%;
-    }  
+      @include content();
+    }
   }
-  .about-item{
-   
+  
+  .number-bolder-lg {
+    font-weight: bolder;
+    font-size: 40px;
   }
 
+  .btn-disable {
+    @include button-disable();
+  }
+
+  #model-reward {
+    &-title {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+    &-content {
+      font-weight: lighter;
+      font-size: 14px;
+    }
+  }
+
+  #no-reward{
+    .form-header{
+      justify-content: flex-start;
+    }
+  }
 } //end media
 
 @media screen and (min-width: 800px) {
