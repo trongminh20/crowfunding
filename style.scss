@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+/*====== variables==========*/
+
+$green: #3cb3ab;
+$gray: #aaaaaa;
+$body-color: #e7e1e1;
+/*======Mixin============*/
+@mixin flexDisplay($direction) {
+  display: flex;
+  flex-direction: $direction;
+  @if $direction == row or $direction == row-reverse {
+    column-gap: 20px;
+  } @else if $direction == column or $direction == column-reverse {
+    row-gap: 20px;
+  }
+}
+@mixin content() {
+  font-family: "open Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin button() {
+  border: none;
+  border-radius: 50px;
+  background-color: $green;
+  color: white;
+  font-weight: bolder;
+}
+@mixin button-reverse() {
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  color: green;
+}
+
+html,
+body {
+  margin: unset;
+  padding: unset;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $body-color;
+}
+.btn {
+  @include button();
+}
+.btn-reverse {
+  @include button-reverse();
+}
+#navbar {
+  position: fixed;
+  background-color: white;
+}
+@media screen and (max-width: 799px) {
+  #navbar {
+    @include flexDisplay(row);
+    justify-content: space-between;
+    position: relative fixed;
+    top: 0;
+    z-index: 10;
+    &-brand a {
+      text-decoration: none;
+      font-size: 30px;
+      color: $green;
+    }
+    &-navdiv {
+      display: none;
+    }
+    &-nav {
+      position: absolute;
+      background-color: white;
+      @include flexDisplay(column);
+      row-gap: 10px;
+      li a {
+        text-decoration: none;
+        color: $green;
+      }
+
+      li:hover {
+        background-color: $green;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  #page-cover {
+    margin-top: 50px;
+    overflow: hidden;
+    height: 30vh;
+    position: relative;
+    &-img {
+      width: 100%;
+      height: inherit;
+    }
+  }
+
+  #main-content {
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    @include flexDisplay(column);
+    justify-content: space-between;
+    background-color: $body-color;
+  }
+  .block {
+    @include flexDisplay(column);
+    border-radius: 15px;
+    background-color: white;
+    padding:20px;
+    
+    &-title {
+      font-family:"open Sans", sans-serif;
+      font-weight: bolder;
+    }
+    &-body {
+      @include flexDisplay(column);
+      align-items: center;
+      @include content();
+    }
+    &-about-item{
+      padding:20px 10px 20px 10px;
+      width:95%;
+      border:1px solid $gray;
+      border-radius: 15px;
+      margin:auto;
+    }
+   
+  }
+  
+  #introduction {
+    //relative to page cover
+    position: absolute;
+    width: 85%;
+    top: 13em;
+    left: 2rem;
+    padding-bottom: 15px;
+    &-logo {
+      position: inherit;
+      top: -30px;
+      left:40%;
+    }
+    &-title {
+      text-align: center;
+      margin-top: 30px;
+      font-family: "open Sans", sans-serif;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &-content {
+      @include flexDisplay(column);
+      @include content();
+      align-items:center;
+    }
+    &-btns{
+      @include flexDisplay(row);
+      justify-content: center;
+      align-items:center;
+    }
+  }
+
+  
+  #report {
+    margin-top: 65%;
+    @include flexDisplay(column);
+    justify-content: center;
+    align-items:center;
+    .report-element-item{
+      @include flexDisplay(column);
+      align-items: center;
+      row-gap:5px;
+      border-bottom:1px solid $gray;
+    }
+    .number{
+      font-weight: bolder;
+    }
+  }
+
+  #about{
+    &-title,
+    &-content{
+      margin:auto;
+      width: 95%;
+    }  
+  }
+  .about-item{
+   
+  }
+
+} //end media
+
+@media screen and (min-width: 800px) {
+}
