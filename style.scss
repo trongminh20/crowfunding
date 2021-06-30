@@ -41,8 +41,8 @@ $body-color: #e7e1e1;
   background-color: $gray;
 }
 
-@mixin font-content($size, $weight){
-  font-size:$size;
+@mixin font-content($size, $weight) {
+  font-size: $size;
   font-family: "open Sans", sans-serif;
   font-weight: $weight;
 }
@@ -58,22 +58,22 @@ body {
   background-color: $body-color;
 }
 
-.scrolling{
-  background-color:white;
-  #navbar-brand a{
-    color:$green;
+.scrolling {
+  background-color: white;
+  #navbar-brand a {
+    color: $green;
   }
-  #navbar-nav{
-    li{
-      &:hover{
-        background-color:$green;
-        a{
-          color:white;
+  #navbar-nav {
+    li {
+      &:hover {
+        background-color: $green;
+        a {
+          color: white;
         }
       }
     }
-    li a{
-      color:$green;
+    li a {
+      color: $green;
     }
   }
 }
@@ -86,102 +86,107 @@ body {
   @include button-reverse();
 }
 
-.green-words{
-  color:$green;
-  @include font-content(14px,bolder);
+.green-words {
+  color: $green;
+  @include font-content(14px, bolder);
 }
-.gray-words{
-  color:$gray;
-  @include font-content(14px,bold)
+.gray-words {
+  color: $gray;
+  @include font-content(14px, bold);
 }
 
-#navbar{
-  position:fixed;
-  top:0;
-  z-index:20;
+#navbar {
+  position: fixed;
+  top: 0;
+  z-index: 20;
   @include flexDisplay(row);
   justify-content: space-between;
-  @media screen and (max-width:799px) {
-    position:relative fixed;
-    top:0;
+  @media screen and (max-width: 799px) {
+    position: relative fixed;
+    top: 0;
   }
 
   @media screen and(min-width:800px) {
- 
   }
 
   &-brand a {
     text-decoration: none;
     font-size: 2rem;
     font-weight: bolder;
-    @include font-content(40px,bolder);
-    color:white;
+    @include font-content(40px, bolder);
+    color: white;
   }
-  &-nav{
+  &-nav {
     @media screen and(max-width:799px) {
       @include flexDisplay(column);
-      row-gap:5px;  
+      row-gap: 5px;
     }
-    @media screen and (min-width:800px){
-      margin-top:10px;
+    @media screen and (min-width: 800px) {
+      margin-top: 10px;
     }
-    .nav-link{
-      a{
+    .nav-link {
+      a {
         text-decoration: none;
         @include font-content(14px, bold);
-        color:white;
+        color: white;
       }
-      &:hover{
-        background-color:white;
-        a{
-          color:$green;
+      &:hover {
+        background-color: white;
+        a {
+          color: $green;
         }
       }
     }
   }
 }
 
-#page-cover{
-  overflow:hidden;
-  position:relative;
+#page-cover {
+  overflow: hidden;
+  position: relative;
 }
 
-#introduction{
-  position:absolute;
-  margin:unset;
-  width:80%;
+#introduction {
+  position: absolute;
+  margin: unset;
+  width: 80%;
   top: 22em;
   left: 7rem;
   @include flexDisplay(column);
   justify-content: center;
   align-items: center;
-  padding-top:2rem;
-  padding-bottom:2em;
 
-  @media screen and (max-width:799px){
+  padding-top: 2rem;
+  padding-bottom: 2em;
+
+  @media screen and (max-width: 799px) {
     width: 90%;
-    position:absolute;
-    top:22em;
-    left:2rem;
+    position: absolute;
+    top: 22em;
+    left: 2rem;
   }
 
   &-logo {
     position: inherit;
     top: -30px;
     left: 50%;
-    transform:translate(-50%);
+    transform: translate(-50%);
 
-    @media screen and (max-width:799px) {
-      left:50%;
-      transform:tranlate(-50%);
+    @media screen and (max-width: 799px) {
+      left: 50%;
+      transform: tranlate(-50%);
+    }
+
+    #bookmark-btn {
+      background-color: #333333e8;
+      border-radius: 25px;
     }
   }
-  &-title{
-    @include font-content(30px,bolder);
-    padding-left:1rem;
-    padding-right:1rem;
+  &-title {
+    @include font-content(30px, bolder);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  &-content{
+  &-content {
     @include flexDisplay(column);
     @include content();
     align-items: center;
@@ -192,83 +197,120 @@ body {
   width: 80%;
   background-color: white;
   @include flexDisplay(column);
-  row-gap:30px;
-  margin:auto;
-  background-color:$body-color;
+  row-gap: 30px;
+  margin: auto;
+  background-color: $body-color;
   @media screen and (max-width: 799px) {
     width: 90%;
-    margin:auto;
-  } 
+    margin: auto;
+  }
 }
 
-.block{
-  background-color:white;
-  border-radius:15px;
+.block {
+  background-color: white;
+  border-radius: 15px;
   @include flexDisplay(column);
-  padding:2rem;
-  
-  &-about-item{
-    border:1px solid $gray;
+  padding: 2rem;
+
+  &-about-item {
+    border: 1px solid $gray;
     border-radius: 15px;
-    margin:auto;
+    margin: auto;
     width: 90%;
-    padding-top:2rem;
-    padding-bottom:2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   &-title,
   &-item-header,
-  &-item-footer{
-    padding-left:5%;
+  &-item-footer {
+    @include flexDisplay(row);
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5%;
     padding-right: 5%;
-    h3{
-      @include font-content(1rem,bolder);
+    h3 {
+      @include font-content(1rem, bolder);
     }
   }
   &-main-content,
-  &-item-body{
+  &-item-body {
     @include content();
-    padding-left:5%;
-    padding-right:5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  &-btns {
+    width: 55%;
+    @include flexDisplay(row);
+    justify-content: space-between;
   }
 }
 
-#report{
-  margin-top:13em;
-  @media screen and (max-width:799px) {
-    margin-top:16em;
+#report {
+  margin-top: 13em;
+  @media screen and (max-width: 799px) {
+    margin-top: 16em;
   }
   justify-content: center;
   align-items: center;
-  
-  .report-element{
+
+  .report-element {
     width: 80%;
     @media screen and(max-width:799px) {
       width: 100%;
     }
   }
-  &-table{
+  &-table {
     @include flexDisplay(row);
     justify-content: center;
     align-items: center;
-    column-gap:30%;
-    @media screen and (max-width:799px) {
-      column-gap:20%;
+    column-gap: 30%;
+    @media screen and (max-width: 799px) {
+      column-gap: 20%;
     }
   }
-  #process-bar{
-    height:5px;
-    background-color:$body-color;
-    border-radius:25px;
-   
-    &-color{
-      width:80%;
-      background-color:$green;
+  #process-bar {
+    height: 5px;
+    background-color: $body-color;
+    border-radius: 25px;
+
+    &-color {
+      width: 80%;
+      background-color: $green;
       height: 5px;
       border-radius: 25px;
     }
   }
 }
 
-#about{
-
+#success-model {
+  @include flexDisplay(column);
+  justify-content: center;
+  align-items: center;
+  width:70%;
+  
+  &-header {
+    @include flexDisplay(column);
+    justify-content: center;
+    align-items: center;
+    h2{
+      text-align: center;
+    }
+  }
+  &-body {
+    width: 70%;
+    @include flexDisplay(column);
+    justify-content: center;
+    align-items: center;
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &-footer {
+    @include flexDisplay(column);
+    align-items: center;
+    button {
+      width: 40%;
+    }
+  }
 }
