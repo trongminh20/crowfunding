@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="report-element" id="process-bar">
-
+                <div id="process-bar-color"></div>
             </div>
         </div>
         <div class="block" id="about">
@@ -101,7 +101,7 @@
                 </div>
                 <div class="block-item-footer" id="bamboo-btn">
                     <p><span class="number-bolder-lg">101</span> left</p>
-                    <button class="btn">Select Reward</button>
+                    <button class="btn" onclick= "showModel();">Select Reward</button>
                 </div>
             </div>
             <div class="block-about-item" id="black">
@@ -136,9 +136,9 @@
             </div>
         </div>
         
-        <div class="block" id="models-reward">
+        <div class="block" id="models-reward" style="display:none;">
             <div class="block-title">
-                <h1 id="model-reward-title">Back to this project</h1>
+                <h1 id="model-reward-title"><a href="" onclick="closeModel();">Back to this project</a></h1>
                 <p class="gray-words" id="model-reward-content">Want to support us in bringing MasterCraft Bamboo Monitor Raiser out in the world?</p>
             </div>
 
@@ -157,7 +157,7 @@
             <div class="block-form" id="bamboo-reward">
                 <form action="">
                     <div class="form-header">
-                        <label for=""><input type="radio">Bamboo Stand <span class="green-words">Pledge $25 or more</span></label>
+                        <label for=""><input id="bamboo" type="radio" onclick="showFooter(this);">Bamboo Stand <span class="green-words">Pledge $25 or more</span></label>
                         <p><span class="number-left">101</span> <span class="gray-words">left</span></p>
                     </div>
                     <div class="form-body">
@@ -166,7 +166,7 @@
                         </p>
                     </div>
                     <hr>
-                    <div class="form-footer">
+                    <div class="form-footer" id="bamboo-form-footer">
                         <p class="gray-words">Enter your pledge</p>
                         <div class="form-footer-input">
                             <label for="">$</label>
@@ -176,19 +176,19 @@
                     </div>
                 </form>
             </div>
-            <div class="block-form" id="">
+            <div class="block-form" id="black-edition-reward">
                 <form action="">
                     <div class="form-header">
-                        <label for=""><input type="radio">Black Edition Stand <span class="green-words">Pledge $75 or more</span></label>
+                        <label for=""><input type="radio" id="black" onclick="showFooter(this);">Black Edition Stand <span class="green-words">Pledge $75 or more</span></label>
                         <p><span class="number-left">64</span> <span class="gray-words">left</span></p>
                     </div>
                     <div class="form-body">
                         You getr a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping included.
                     </div>
                     <hr>
-                    <div class="form-footer">
+                    <div class="form-footer" id="black-form-footer">
                         <p class="gray-words">Enter your pledge</p>
-                        <div class="form-footer-input">
+                        <div class="form-footer-input" id="">
                             <label for="">$</label>
                             <input class="form-footer-pledge-input" type="text">
                             <input type="submit" class="btn" value="continue">

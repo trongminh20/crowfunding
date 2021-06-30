@@ -149,9 +149,8 @@ body {
     color: #aaaaaa;
   }
   .form-footer {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    display: none;
+    flex-direction: colummn;
     align-items: center;
     row-gap: 15px;
     padding-bottom: 20px;
@@ -274,11 +273,27 @@ body {
     background-color: #aaaaaa;
   }
 
-  #model-reward-title {
+  #process-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #e7e1e1;
+    border-radius: 25px;
+  }
+  #process-bar-color {
+    width: 80%;
+    background-color: #3cb3ab;
+    height: 5px;
+    border-radius: 25px;
+  }
+
+  #models-reward {
+    display: none;
+  }
+  #models-reward-title {
     font-weight: bolder;
     font-size: 20px;
   }
-  #model-reward-content {
+  #models-reward-content {
     font-weight: lighter;
     font-size: 14px;
   }
