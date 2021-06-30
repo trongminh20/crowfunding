@@ -44,6 +44,20 @@ body {
   font-weight: bolder;
 }
 
+.green-words {
+  color: #3cb3ab;
+  font-size: 14px;
+  font-family: "open Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.gray-words {
+  color: #aaaaaa;
+  font-size: 14px;
+  font-family: "open Sans", sans-serif;
+  font-weight: bold;
+}
+
 #navbar {
   position: fixed;
   top: 0;
@@ -172,16 +186,46 @@ body {
 .block {
   background-color: white;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 2rem;
+}
+.block-about-item {
+  border: 1px solid #aaaaaa;
+  border-radius: 15px;
+  margin: auto;
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.block-title, .block-item-header, .block-item-footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.block-title h3, .block-item-header h3, .block-item-footer h3 {
+  font-size: 1rem;
+  font-family: "open Sans", sans-serif;
+  font-weight: bolder;
+}
+.block-main-content, .block-item-body {
+  font-family: "open Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  color: #aaaaaa;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #report {
   margin-top: 13em;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+}
+@media screen and (max-width: 799px) {
+  #report {
+    margin-top: 16em;
+  }
 }
 #report .report-element {
   width: 80%;
