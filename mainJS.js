@@ -36,3 +36,7 @@ function showModel() {
 function closeModel(){
   document.getElementById('models-reward').style.display = "none";
 }
+
+function scrollNavbar(e){
+  e.classList.add("scrolling");
+}
