@@ -23,6 +23,10 @@ $body-color: #e7e1e1;
   color: $gray;
 }
 @mixin button() {
+  width: 25%;
+  @media screen and(max-width:799px){
+    width: 50%;
+  }
   border: none;
   border-radius: 50px;
   background-color: $green;
@@ -30,6 +34,10 @@ $body-color: #e7e1e1;
   font-weight: bolder;
 }
 @mixin button-reverse() {
+  width: 25%;
+  @media screen and(max-width:799px){
+    width: 50%;
+  }
   border: none;
   border-radius: 50px;
   background-color: white;
@@ -142,7 +150,7 @@ body {
 
 #page-cover {
   overflow: hidden;
-  position: relative;
+  position: relative;  
 }
 
 #introduction {
@@ -164,6 +172,7 @@ body {
     top: 22em;
     left: 2rem;
   }
+  
 
   &-logo {
     position: inherit;
@@ -174,11 +183,6 @@ body {
     @media screen and (max-width: 799px) {
       left: 50%;
       transform: tranlate(-50%);
-    }
-
-    #bookmark-btn {
-      background-color: #333333e8;
-      border-radius: 25px;
     }
   }
   &-title {
@@ -206,6 +210,9 @@ body {
   }
 }
 
+.block-disable{
+  opacity:0.5;
+}
 .block {
   background-color: white;
   border-radius: 15px;
@@ -231,6 +238,13 @@ body {
     h3 {
       @include font-content(1rem, bolder);
     }
+    .number-bolder-lg{
+      font-size:30px;
+      font-weight: bolder;
+    }
+    .btn-disable{
+      @include button-disable();
+    }
   }
   &-main-content,
   &-item-body {
@@ -238,10 +252,78 @@ body {
     padding-left: 5%;
     padding-right: 5%;
   }
+  &-form {
+    border: 1px solid $gray;
+    border-radius: 15px;
+    padding: 10px;
+  }
   &-btns {
     width: 55%;
     @include flexDisplay(row);
     justify-content: space-between;
+    @media screen and (max-width:799px){
+      width: 100%;
+    }
+    .btn{
+      width:40%;
+    }
+  }
+}
+.form {
+  &-header {
+    @include flexDisplay(row);
+    column-gap: 5px;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    label {
+      font-weight: bolder;
+    }
+  }
+
+  &-body {
+    @include content();
+  }
+  &-footer {
+    @media screen and (min-width:800px) {
+      @include flexDisplay(row);
+      justify-content:space-between;
+    }
+    display:none;
+    flex-direction:colummn;
+    align-items: center;
+    row-gap:15px;
+    padding-bottom:20px;
+    p {
+      font-size: 14px;
+    }
+
+    &-pledge-input {
+      border-radius: 50px;
+      width: 50%;
+    }
+  }
+
+  &-footer-input {
+    @include flexDisplay(row);
+    position: relative;
+    @media screen and (min-width:800px){
+      width:50%;
+    }
+    .btn {
+      width: 50%;
+      @media screen and (min-width:800px){
+        width: 25%;
+      }
+    }
+    
+    label {
+      position: absolute;
+      z-index: 2;
+      left: 15px;
+      top: 0.4rem;
+      color: $gray;
+      font-weight: bolder;
+    }
   }
 }
 
@@ -261,6 +343,9 @@ body {
   }
   &-table {
     @include flexDisplay(row);
+    @media screen and (max-width:799px){
+      @include flexDisplay(column);
+    }
     justify-content: center;
     align-items: center;
     column-gap: 30%;
@@ -278,6 +363,33 @@ body {
       background-color: $green;
       height: 5px;
       border-radius: 25px;
+    }
+  }
+}
+#models-reward{
+  width:80%;
+  @media screen and (max-width:799px) {
+    width: 90%;
+  }
+  top:50%;
+  left:50%;
+  transform:translate(-50%);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  &-title {
+    font-weight: bolder;
+    font-size: 20px;
+    a{text-decoration: none;}
+  }
+  &-content {
+    font-weight: lighter;
+    font-size: 14px;
+  }
+  .block-title{
+    @include flexDisplay(column);
+  }
+  #no-reward{
+    .form-header{
+      justify-content: flex-start;
     }
   }
 }

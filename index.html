@@ -20,10 +20,12 @@
             window.addEventListener('resize', function(){
                 if(window.innerWidth < 800){
                     document.getElementById("responsive-button").style.display = "block";
+                    document.getElementById("navbar-navdiv").style.display="none";
                 }
             });
             if(window.innerWidth > 800){
                 document.getElementById("responsive-button").style.display="none";
+                document.getElementById("navbar-navdiv").style.display="flex";
             }
         }
         window.addEventListener("scroll", function(){
@@ -67,9 +69,8 @@
         </div>
     </nav>
     <div class="" id="page-cover">
-        <img id="page-cover-img" src="images/image-hero-desktop.jpg" alt="">
+        <img id="page-cover-img" src="images/image-hero-desktop.jpg">
     </div>
-
     <div class="" id="main-content">
         <div class="block" id="introduction">
             <div id="introduction-logo">
@@ -142,7 +143,7 @@
                     <button class="btn ">Select Reward</button>
                 </div>
             </div>
-            <div class="block-about-item block-disable" id="special" aria-disabled="true">
+            <div class="block-about-item block-disable" id="special">
                 <div class="block-item-header " id="special">
                     <h3 class="">Mahogany Special Edition</h3>
                     <p class="green-words">Pledge $200 or more</p>
@@ -161,7 +162,7 @@
         
         <div class="block" id="models-reward" style="display:none;">
             <div class="block-title">
-                <h1 id="model-reward-title"><a href="" onclick="closeModel();">Back to this project</a></h1>
+                <h1 id="models-reward-title"><a href="" onclick="closeModel();">Back to this project</a></h1>
                 <p class="gray-words" id="model-reward-content">Want to support us in bringing MasterCraft Bamboo Monitor Raiser out in the world?</p>
             </div>
 
