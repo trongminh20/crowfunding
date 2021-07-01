@@ -35,3 +35,10 @@ function closeModel(){
   document.getElementById('models-reward').style.display = "none";
 }
 
+function showSuccess(){
+  document.getElementById("success-model").style.display ="block";
+}
+
+function closeDiv(e){
+  e.style.display = "none";
+}

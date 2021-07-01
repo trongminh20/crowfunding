@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 /*====== variables==========*/
 /*======Mixin============*/
+/*======Style============*/
 html,
 body {
   margin: unset;
@@ -236,10 +237,6 @@ body {
   font-family: "open Sans", sans-serif;
   font-weight: bolder;
 }
-.block-title .number-bolder-lg, .block-item-header .number-bolder-lg, .block-item-footer .number-bolder-lg {
-  font-size: 30px;
-  font-weight: bolder;
-}
 .block-title .btn-disable, .block-item-header .btn-disable, .block-item-footer .btn-disable {
   width: 25%;
   border: none;
@@ -281,6 +278,11 @@ body {
 }
 .block-btns .btn {
   width: 40%;
+}
+
+.number-bolder-lg {
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .form-header {
@@ -326,7 +328,7 @@ body {
   display: flex;
   flex-direction: row;
   column-gap: 20px;
-  position: relative;
+  justify-content: center;
 }
 @media screen and (min-width: 800px) {
   .form-footer-input {
@@ -342,10 +344,6 @@ body {
   }
 }
 .form-footer-input label {
-  position: absolute;
-  z-index: 2;
-  left: 15px;
-  top: 0.4rem;
   color: #aaaaaa;
   font-weight: bolder;
 }
@@ -436,6 +434,11 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transform: translate(-50%);
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -451,7 +454,7 @@ body {
   text-align: center;
 }
 #success-model-body {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 20px;

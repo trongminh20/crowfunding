@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 /*====== variables==========*/
-
 $green: #3cb3ab;
 $gray: #aaaaaa;
 $body-color: #e7e1e1;
@@ -24,7 +23,7 @@ $body-color: #e7e1e1;
 }
 @mixin button() {
   width: 25%;
-  @media screen and(max-width:799px){
+  @media screen and(max-width:799px) {
     width: 50%;
   }
   border: none;
@@ -35,7 +34,7 @@ $body-color: #e7e1e1;
 }
 @mixin button-reverse() {
   width: 25%;
-  @media screen and(max-width:799px){
+  @media screen and(max-width:799px) {
     width: 50%;
   }
   border: none;
@@ -48,13 +47,12 @@ $body-color: #e7e1e1;
   @include button();
   background-color: $gray;
 }
-
 @mixin font-content($size, $weight) {
   font-size: $size;
   font-family: "open Sans", sans-serif;
   font-weight: $weight;
 }
-
+/*======Style============*/
 html,
 body {
   margin: unset;
@@ -65,16 +63,18 @@ body {
   bottom: 0;
   background-color: $body-color;
 }
+
 .fa-bars {
-  color:white;
+  color: white;
 }
+
 .scrolling {
   background-color: white;
   #navbar-brand a {
     color: $green;
   }
-  .fa-bars{
-    color:$green;
+  .fa-bars {
+    color: $green;
   }
   #navbar-nav {
     li {
@@ -103,6 +103,7 @@ body {
   color: $green;
   @include font-content(14px, bolder);
 }
+
 .gray-words {
   color: $gray;
   @include font-content(14px, bold);
@@ -155,7 +156,7 @@ body {
 
 #page-cover {
   overflow: hidden;
-  position: relative;  
+  position: relative;
 }
 
 #introduction {
@@ -177,7 +178,6 @@ body {
     top: 22em;
     left: 2rem;
   }
-  
 
   &-logo {
     position: inherit;
@@ -215,9 +215,10 @@ body {
   }
 }
 
-.block-disable{
-  opacity:0.5;
+.block-disable {
+  opacity: 0.5;
 }
+
 .block {
   background-color: white;
   border-radius: 15px;
@@ -243,11 +244,8 @@ body {
     h3 {
       @include font-content(1rem, bolder);
     }
-    .number-bolder-lg{
-      font-size:30px;
-      font-weight: bolder;
-    }
-    .btn-disable{
+  
+    .btn-disable {
       @include button-disable();
     }
   }
@@ -266,13 +264,17 @@ body {
     width: 55%;
     @include flexDisplay(row);
     justify-content: space-between;
-    @media screen and (max-width:799px){
+    @media screen and (max-width: 799px) {
       width: 100%;
     }
-    .btn{
-      width:40%;
+    .btn {
+      width: 40%;
     }
   }
+}
+.number-bolder-lg {
+  font-size: 30px;
+  font-weight: bolder;
 }
 .form {
   &-header {
@@ -289,43 +291,39 @@ body {
     @include content();
   }
   &-footer {
-    @media screen and (min-width:800px) {
+    @media screen and (min-width: 800px) {
       @include flexDisplay(row);
-      justify-content:space-between;
+      justify-content: space-between;
     }
-    display:none;
-    flex-direction:colummn;
+    display: none;
+    flex-direction: colummn;
     align-items: center;
-    row-gap:15px;
-    padding-bottom:20px;
+    row-gap: 15px;
+    padding-bottom: 20px;
     p {
       font-size: 14px;
     }
 
     &-pledge-input {
+      // position:relative;
       border-radius: 50px;
       width: 50%;
     }
   }
-
   &-footer-input {
     @include flexDisplay(row);
-    position: relative;
-    @media screen and (min-width:800px){
-      width:50%;
+    justify-content:center;
+    @media screen and (min-width: 800px) {
+      width: 50%;
     }
     .btn {
       width: 50%;
-      @media screen and (min-width:800px){
+      @media screen and (min-width: 800px) {
         width: 25%;
       }
     }
-    
+
     label {
-      position: absolute;
-      z-index: 2;
-      left: 15px;
-      top: 0.4rem;
       color: $gray;
       font-weight: bolder;
     }
@@ -348,7 +346,7 @@ body {
   }
   &-table {
     @include flexDisplay(row);
-    @media screen and (max-width:799px){
+    @media screen and (max-width: 799px) {
       @include flexDisplay(column);
     }
     justify-content: center;
@@ -371,29 +369,32 @@ body {
     }
   }
 }
-#models-reward{
-  width:80%;
-  @media screen and (max-width:799px) {
+
+#models-reward {
+  width: 80%;
+  @media screen and (max-width: 799px) {
     width: 90%;
   }
-  top:50%;
-  left:50%;
-  transform:translate(-50%);
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   &-title {
     font-weight: bolder;
     font-size: 20px;
-    a{text-decoration: none;}
+    a {
+      text-decoration: none;
+    }
   }
   &-content {
     font-weight: lighter;
     font-size: 14px;
   }
-  .block-title{
+  .block-title {
     @include flexDisplay(column);
   }
-  #no-reward{
-    .form-header{
+  #no-reward {
+    .form-header {
       justify-content: flex-start;
     }
   }
@@ -401,26 +402,31 @@ body {
 
 #success-model {
   @include flexDisplay(column);
+  position:absolute;
+  left:50%;
+  top:100%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transform:translate(-50%);
   justify-content: center;
   align-items: center;
-  width:70%;
-  
+  width: 70%;
+
   &-header {
     @include flexDisplay(column);
     justify-content: center;
     align-items: center;
-    h2{
+    h2 {
       text-align: center;
     }
   }
   &-body {
-    width: 70%;
+    width: 100%;
     @include flexDisplay(column);
     justify-content: center;
     align-items: center;
     p {
       width: 100%;
-      text-align: center;
+      text-align: center;    
     }
   }
   &-footer {
@@ -431,4 +437,3 @@ body {
     }
   }
 }
-
