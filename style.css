@@ -37,12 +37,16 @@ body {
 }
 
 .btn {
-  width: 25%;
   border: none;
   border-radius: 50px;
   background-color: #3cb3ab;
   color: white;
   font-weight: bolder;
+}
+@media screen and (min-width: 800px) {
+  .btn {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 799px) {
   .btn {
@@ -137,9 +141,10 @@ body {
 #introduction {
   position: absolute;
   margin: unset;
-  width: 80%;
+  width: 60%;
   top: 22em;
-  left: 7rem;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -153,7 +158,7 @@ body {
     width: 90%;
     position: absolute;
     top: 22em;
-    left: 2rem;
+    left: 50%;
   }
 }
 #introduction-logo {
@@ -187,7 +192,7 @@ body {
 }
 
 #main-content {
-  width: 80%;
+  width: 60%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -238,13 +243,17 @@ body {
   font-weight: bolder;
 }
 .block-title .btn-disable, .block-item-header .btn-disable, .block-item-footer .btn-disable {
-  width: 25%;
   border: none;
   border-radius: 50px;
   background-color: #3cb3ab;
   color: white;
   font-weight: bolder;
   background-color: #aaaaaa;
+}
+@media screen and (min-width: 800px) {
+  .block-title .btn-disable, .block-item-header .btn-disable, .block-item-footer .btn-disable {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 799px) {
   .block-title .btn-disable, .block-item-header .btn-disable, .block-item-footer .btn-disable {
@@ -359,12 +368,15 @@ body {
   }
 }
 #report .report-element {
-  width: 80%;
+  width: 90%;
 }
 @media screen and (max-width: 799px) {
   #report .report-element {
     width: 100%;
   }
+}
+#report .report-element-item p {
+  font-size: 12px;
 }
 #report-table {
   display: flex;

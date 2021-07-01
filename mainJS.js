@@ -16,7 +16,6 @@ function showFooter(e) {
       document.getElementById(target).style = "display:flex; flex-direction:row";
     }
   } else {
-    e.checked = false;
     document.getElementById(target).style.display = "none";
   }
 }

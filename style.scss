@@ -22,7 +22,9 @@ $body-color: #e7e1e1;
   color: $gray;
 }
 @mixin button() {
-  width: 25%;
+  @media screen and (min-width:800px){
+    width:50%;
+  }
   @media screen and(max-width:799px) {
     width: 50%;
   }
@@ -162,9 +164,10 @@ body {
 #introduction {
   position: absolute;
   margin: unset;
-  width: 80%;
+  width: 60%;
   top: 22em;
-  left: 7rem;
+  left: 50%;
+  transform:translate(-50%);
   @include flexDisplay(column);
   justify-content: center;
   align-items: center;
@@ -176,7 +179,7 @@ body {
     width: 90%;
     position: absolute;
     top: 22em;
-    left: 2rem;
+    left:50%;
   }
 
   &-logo {
@@ -203,7 +206,7 @@ body {
 }
 
 #main-content {
-  width: 80%;
+  width: 60%;
   background-color: white;
   @include flexDisplay(column);
   row-gap: 30px;
@@ -339,9 +342,14 @@ body {
   align-items: center;
 
   .report-element {
-    width: 80%;
+    width: 90%;
     @media screen and(max-width:799px) {
       width: 100%;
+    }
+    &-item{
+      p{
+        font-size:12px;
+      }
     }
   }
   &-table {
