@@ -65,11 +65,16 @@ body {
   bottom: 0;
   background-color: $body-color;
 }
-
+.fa-bars {
+  color:white;
+}
 .scrolling {
   background-color: white;
   #navbar-brand a {
     color: $green;
+  }
+  .fa-bars{
+    color:$green;
   }
   #navbar-nav {
     li {
@@ -426,3 +431,4 @@ body {
     }
   }
 }
+

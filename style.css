@@ -12,10 +12,17 @@ body {
   background-color: #e7e1e1;
 }
 
+.fa-bars {
+  color: white;
+}
+
 .scrolling {
   background-color: white;
 }
 .scrolling #navbar-brand a {
+  color: #3cb3ab;
+}
+.scrolling .fa-bars {
   color: #3cb3ab;
 }
 .scrolling #navbar-nav li:hover {
@@ -215,9 +222,7 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.block-title,
-.block-item-header,
-.block-item-footer {
+.block-title, .block-item-header, .block-item-footer {
   display: flex;
   flex-direction: row;
   column-gap: 20px;
@@ -226,22 +231,16 @@ body {
   padding-left: 5%;
   padding-right: 5%;
 }
-.block-title h3,
-.block-item-header h3,
-.block-item-footer h3 {
+.block-title h3, .block-item-header h3, .block-item-footer h3 {
   font-size: 1rem;
   font-family: "open Sans", sans-serif;
   font-weight: bolder;
 }
-.block-title .number-bolder-lg,
-.block-item-header .number-bolder-lg,
-.block-item-footer .number-bolder-lg {
+.block-title .number-bolder-lg, .block-item-header .number-bolder-lg, .block-item-footer .number-bolder-lg {
   font-size: 30px;
   font-weight: bolder;
 }
-.block-title .btn-disable,
-.block-item-header .btn-disable,
-.block-item-footer .btn-disable {
+.block-title .btn-disable, .block-item-header .btn-disable, .block-item-footer .btn-disable {
   width: 25%;
   border: none;
   border-radius: 50px;
@@ -251,14 +250,11 @@ body {
   background-color: #aaaaaa;
 }
 @media screen and (max-width: 799px) {
-  .block-title .btn-disable,
-  .block-item-header .btn-disable,
-  .block-item-footer .btn-disable {
+  .block-title .btn-disable, .block-item-header .btn-disable, .block-item-footer .btn-disable {
     width: 50%;
   }
 }
-.block-main-content,
-.block-item-body {
+.block-main-content, .block-item-body {
   font-family: "open Sans", sans-serif;
   font-weight: lighter;
   font-size: 14px;
